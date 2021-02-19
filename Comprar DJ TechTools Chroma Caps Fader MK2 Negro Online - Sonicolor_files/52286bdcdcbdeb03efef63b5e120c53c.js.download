@@ -1,0 +1,54 @@
+
+        (function() {
+          function insertScript(content, type, id) {
+            var s = document.createElement('script');
+            var body = document.querySelector('body');
+            s.type = type;
+            if (id) {
+              s.id = id;
+            }
+            s.innerText = content;
+            body.appendChild(s);
+          }
+          function insertCSS(content) {
+            var sheet = document.createElement('style');
+            var head = document.querySelector('head');
+            sheet.type = 'text/css';
+
+            sheet.innerText = content;
+            head.appendChild(sheet);
+          }
+        }());
+
+var doofinder_script ='//cdn.doofinder.com/media/js/doofinder-classic.7.latest.min.js';
+(function(d,t){var f=d.createElement(t),s=d.getElementsByTagName(t)[0];f.async=1;
+f.src=('https:'==location.protocol?'https:':'http:')+doofinder_script;
+f.setAttribute('charset','utf-8');
+s.parentNode.insertBefore(f,s)}(document,'script'));
+
+var dfClassicLayers = [{
+  "hashid": "52286bdcdcbdeb03efef63b5e120c53c",
+  "zone": "eu1",
+  "googleAnalytics": "gtm3",   
+  "display": {  
+    "lang": "es",
+    "width": "100%",
+    "align": "center",
+    "dtop": 10,
+    "captureLength": 4, 
+           "results": {
+         "template": document.getElementById('df-my-template').innerHTML
+       },                   
+    "facets": {
+      "attached": "left"
+    }    
+  },
+    "mobile": {
+     "display": {
+       "results": {
+         "template": document.getElementById('df-my-template').innerHTML
+       },
+     },
+  },  
+  "queryInput": "#vnlab_query_top"
+}];
